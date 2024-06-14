@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Adding Google Font -->
+    <link rel="stylesheet" href="styles.css"> <!-- Linking to the CSS file -->
+</head>
+<body>
+    <div id="app">
+        <!-- Pet selection dropdown menu -->
+        <div id="pet-selection">
+            <label for="pet-select">Choose your pet:</label>
+            <select id="pet-select" onchange="selectPet()">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="rabbit">Rabbit</option>
+            </select>
+        </div>
+        
+        <!-- Container to display the pet image -->
+        <div id="pet-container">
+            <img id="pet-image" src="assets/dog-happy.gif" alt="Virtual Pet">
+        </div>
+        
+        <!-- Control buttons to interact with the pet -->
+        <div id="controls">
+            <button onclick="feedPet()">Feed</button>
+            <button onclick="playWithPet()">Play</button>
+            <button onclick="putPetToSleep()">Sleep</button>
+        </div>
+        
+        <!-- Displaying the pet's attributes using progress bars -->
+        <div id="attributes">
+            <div class="attribute">
+                <label>Hunger:</label>
+                <progress id="hunger" value="100" max="100"></progress>
+            </div>
+            <div class="attribute">
+                <label>Happiness:</label>
+                <progress id="happiness" value="100" max="100"></progress>
+            </div>
+            <div class="attribute">
+                <label>Energy:</label>
+                <progress id="energy" value="100" max="100"></progress>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Linking the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
